@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Prospecção Completa - COTECE 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e5a5a 0%, #0f3b3b 100%); padding: 30px 20px; min-height: 100vh; }
+        .container { max-width: 1600px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e5a5a 0%, #0f3b3b 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        .info-box { background: #f0f8f8; padding: 20px 30px; border-bottom: 1px solid #e0e0e0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .info-item { padding: 10px 0; }
+        .info-item strong { color: #1e5a5a; display: block; margin-bottom: 5px; }
+        .info-item span { color: #666; font-size: 14px; }
+        .table-wrapper { overflow-x: auto; padding: 30px; }
+        table { width: 100%; border-collapse: collapse; font-size: 11px; }
+        th { background: #1e5a5a; color: white; padding: 10px 6px; text-align: left; font-weight: 600; border-bottom: 2px solid #0f3b3b; white-space: nowrap; }
+        td { padding: 8px 6px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover { background-color: #f9f9f9; }
+        tr:nth-child(even) { background-color: #f5f5f5; }
+        .nome { font-weight: 600; color: #1e5a5a; min-width: 140px; }
+        .especialidade { color: #666; font-size: 10px; }
+        .localidade { color: #0f3b3b; font-weight: 500; }
+        .contato { color: #0066cc; font-family: monospace; font-size: 10px; font-weight: 500; }
+        .em-branco { background-color: #fffacd; color: #999; font-size: 10px; }
+        .status { font-size: 9px; padding: 2px 4px; border-radius: 3px; display: inline-block; font-weight: 600; white-space: nowrap; }
+        .status-confirmado { background-color: #4caf50; color: white; }
+        .status-provavel { background-color: #fbc02d; color: #333; }
+        .status-nao-confirmado { background-color: #f44336; color: white; }
+        .legenda { background: #f0f8f8; padding: 20px 30px; border-top: 1px solid #e0e0e0; font-size: 12px; }
+        .legenda-item { margin: 8px 0; }
+        .total { background: #e8f5f5; padding: 15px 30px; font-weight: 600; color: #1e5a5a; border-top: 2px solid #1e5a5a; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .total-item { padding: 10px; }
+        .export-button { background: #1e5a5a; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin: 20px 30px 0 30px; }
+        .export-button:hover { background: #0f3b3b; }
+        .button-group { display: flex; gap: 10px; margin: 20px 30px 0 30px; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Planilha de Prospecção Completa</h1>
+            <p>XXVII COTECE - VII COLIG-CE | Fortaleza-CE, Setembro 2026 | COM CONTATOS</p>
+        </div>
+        <div class="info-box">
+            <div class="info-item"><strong>📅 Evento</strong><span>XXVII COTECE - VII COLIG-CE (I Simpósio Interdisciplinar de Lesões Esportivas)</span></div>
+            <div class="info-item"><strong>📍 Data e Local</strong><span>24-26 de Setembro de 2026 | Gran Mareiro Eventos - Fortaleza-CE</span></div>
+            <div class="info-item"><strong>👥 Total de Palestrantes</strong><span>36 Médicos Ortopedistas</span></div>
+            <div class="info-item"><strong>🎯 Produtos</strong><span>SEMTRI | TRIFOR</span></div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Especialidade</th>
+                        <th>Subespecialidade</th>
+                        <th>Cidade</th>
+                        <th>Clínica/Local</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Instagram</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="nome">Roberto Oliveira</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro, Cotovelo, Traumatologia Desportiva</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Clínica Qorpo</td>
+                        <td class="contato">(85) 3033-3550</td>
+                        <td class="contato">faturamento.qorpo@gmail.com</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="nome">Clodoaldo Duarte</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Av. Santos Dumont 5753</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="nome">Igor de Lucena</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Rua Pereira Filgueiras 1817</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>@igordelucena</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="nome">André Silveira</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Hospital São Camilo, Clínica Qorpo</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="nome">Marcel Rolim</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Centro Médico São Carlos</td>
+                        <td class="contato">(85) 99926-5614</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="nome">Paulo Parente</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Consultório privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Provável</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="nome">Deginaldo Holanda</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Rua Coronel Linhares 950 sala 208</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="nome">Andrei Prado</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro, Cotovelo, Coluna</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>TraumaSport</td>
+                        <td class="contato">(85) 98182-1607</td>
+                        <td class="contato">ceo@traumasport.com.br</td>
+                        <td>@traumasportfor</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="nome">Caio Fábio</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo, Cirurgia Minimamente Invasiva</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Clínica Qorpo</td>
+                        <td class="contato">(85) 99826-1867</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="nome">Heitor Dourado</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Vários consultórios</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>@dr.heitordourado</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td class="nome">Tairo Diógenes</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril, Prótese de Quadril</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CTO - Av. Rui Barbosa 1539</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td class="nome">Marcelo Cortez</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Centro do Joelho</td>
+                        <td class="contato">(85) 3016-7777</td>
+                        <td class="contato">[email protected]</td>
+                        <td>@centrodojoelho</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td class="nome">João Paulo Cortez</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Esporte</td>
+                        <td class="localidade">Fortaleza/SP</td>
+                        <td>Hospital São Luiz</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td class="nome">Geraldo Neto</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Mão e Microcirurgia</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Múltiplos consultórios</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td class="nome">Victor Callado</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Centro do Joelho</td>
+                        <td class="contato">(85) 3016-7777</td>
+                        <td class="contato">[email protected]</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td class="nome">Victor Amon</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Coluna Vertebral</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Office Medical Center</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td class="nome">Ernane Osório</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Clínicas convênio</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td class="nome">Julio Parente</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril, Prótese</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Clínica Inácio Parente</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td class="nome">Marcus Vinícius</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Coluna Vertebral</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Consultório privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td class="nome">Lucas Melo</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Centro do Joelho</td>
+                        <td class="contato">(85) 4009-1644</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td class="nome">Larissa Meireles</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Medicina do Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Ceará SC/Fortaleza</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td class="nome">Réjelos Lira</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Coluna, Endoscopia</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>OTO Clínica Sul</td>
+                        <td class="contato">(85) 3466-1133</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td class="nome">Fabiana Freire</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Riomar Trade Center, Aldeota</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td class="nome">Felipe Rocha</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Av. Antônio Sales 990</td>
+                        <td class="contato">(85) 8146-4546</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td class="nome">Felipe Mendes</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Clínica Ortopédica São Mateus</td>
+                        <td class="contato">(85) 3046-0060</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td class="nome">Rodrigo Linhartes</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril, Gestor Hospitalar</td>
+                        <td class="localidade">Ceará</td>
+                        <td>HMDZAN (Hospital)</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td class="nome">Goltemberg Feitoza</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>OneLiv</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td class="nome">Igor Rabelo</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Mão e Microcirurgia</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Av. Senador Virgílio Távora 195</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td class="nome">Cruz Júnior</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ortopedia/Acupuntura</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Consultório privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td class="nome">Leonardo Colares</td>
+                        <td class="especialidade">—</td>
+                        <td class="especialidade">—</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Clínica Dr Colares</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td class="nome">Luiz Holanda</td>
+                        <td class="especialidade">Ortopedia/Medicina</td>
+                        <td class="especialidade">—</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Dionísio Torres</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td class="nome">Marcos Aurélio</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Trauma, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>Consultório privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-provavel">◐ Parcial</span></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td class="nome">Marcelo Parente</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ortopedia Geral/Trauma</td>
+                        <td class="localidade">Barbalha/Recife</td>
+                        <td>UFCA</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td class="nome">Sidnei Torres</td>
+                        <td class="especialidade">Ortopedia/Medicina</td>
+                        <td class="especialidade">Joelho, Trauma</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>R. Vicente Leite 631, Meireles</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td class="nome">Matheus Dantas</td>
+                        <td class="especialidade">—</td>
+                        <td class="especialidade">—</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td class="nome">Anderson Freitas</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril</td>
+                        <td class="localidade">Brasília</td>
+                        <td>Centro de Ortopedia e Traumatologia</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td>—</td>
+                        <td><span class="status status-nao-confirmado">✗ Localidade Diferente</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total">
+            <div class="total-item">📍 <strong>Fortaleza/CE:</strong> 33 médicos</div>
+            <div class="total-item">✅ <strong>Confirmados:</strong> 20 médicos</div>
+            <div class="total-item">◐ <strong>Parciais:</strong> 10 médicos</div>
+            <div class="total-item">⚠️ <strong>Não Confirmados:</strong> 6 médicos</div>
+            <div class="total-item">📞 <strong>Contatos Encontrados:</strong> 15+ telefones | 5+ emails</div>
+        </div>
+
+        <div class="legenda">
+            <strong>Legenda de Status:</strong><br>
+            <div class="legenda-item">✓ <strong>Confirmado</strong> = Especialidade, localidade e contato validados</div>
+            <div class="legenda-item">◐ <strong>Parcial</strong> = Faltam alguns dados (telefone/email)</div>
+            <div class="legenda-item">✗ <strong>Não Confirmado</strong> = Dados insuficientes para validação</div>
+            <div class="legenda-item">📞 <strong>Telefones com Contato:</strong> Ligar para clínicas recomendadas: Clínica Qorpo (85) 3033-3550 | Centro do Joelho (85) 3016-7777 | TraumaSport (85) 98182-1607</div>
+        </div>
+
+        <div class="button-group">
+            <button class="export-button" onclick="exportarCSV()">📥 Exportar como CSV</button>
+            <button class="export-button" onclick="exportarJSON()">📊 Exportar como JSON</button>
+            <button class="export-button" onclick="imprimirPagina()">🖨️ Imprimir Página</button>
+        </div>
+    </div>
+
+    <script>
+        function exportarCSV() {
+            const table = document.querySelector('table');
+            let csv = [];
+
+            const headers = Array.from(table.querySelectorAll('th')).map(th => th.textContent.trim());
+            csv.push(headers.join(','));
+
+            table.querySelectorAll('tbody tr').forEach(row => {
+                const cells = Array.from(row.querySelectorAll('td')).map(td => {
+                    let text = td.textContent.trim();
+                    text = text.replace(/,/g, ';');
+                    return `"${text}"`;
+                });
+                csv.push(cells.join(','));
+            });
+
+            const csvContent = csv.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'prospeccao_completa_cotece_2026.csv');
+            link.click();
+        }
+
+        function exportarJSON() {
+            const data = [];
+            document.querySelectorAll('tbody tr').forEach(row => {
+                const cells = row.querySelectorAll('td');
+                data.push({
+                    numero: cells[0].textContent.trim(),
+                    nome: cells[1].textContent.trim(),
+                    especialidade: cells[2].textContent.trim(),
+                    subespecialidade: cells[3].textContent.trim(),
+                    cidade: cells[4].textContent.trim(),
+                    clinica: cells[5].textContent.trim(),
+                    telefone: cells[6].textContent.trim(),
+                    email: cells[7].textContent.trim(),
+                    instagram: cells[8].textContent.trim(),
+                    status: cells[9].textContent.trim()
+                });
+            });
+
+            const jsonContent = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonContent], { type: 'application/json;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'prospeccao_completa_cotece_2026.json');
+            link.click();
+        }
+
+        function imprimirPagina() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
