@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Prospecção - COTECE 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e5a5a 0%, #0f3b3b 100%); padding: 30px 20px; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e5a5a 0%, #0f3b3b 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        .info-box { background: #f0f8f8; padding: 20px 30px; border-bottom: 1px solid #e0e0e0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .info-item { padding: 10px 0; }
+        .info-item strong { color: #1e5a5a; display: block; margin-bottom: 5px; }
+        .info-item span { color: #666; font-size: 14px; }
+        .table-wrapper { overflow-x: auto; padding: 30px; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        th { background: #1e5a5a; color: white; padding: 12px 8px; text-align: left; font-weight: 600; border-bottom: 2px solid #0f3b3b; white-space: nowrap; }
+        td { padding: 10px 8px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover { background-color: #f9f9f9; }
+        tr:nth-child(even) { background-color: #f5f5f5; }
+        .nome { font-weight: 600; color: #1e5a5a; min-width: 150px; }
+        .especialidade { color: #666; font-size: 11px; }
+        .localidade { color: #0f3b3b; font-weight: 500; }
+        .em-branco { background-color: #fffacd; color: #999; font-size: 11px; }
+        .confirmado { background-color: #e8f5e9; }
+        .provavel { background-color: #fff9c4; }
+        .status { font-size: 10px; padding: 2px 6px; border-radius: 3px; display: inline-block; font-weight: 600; }
+        .status-confirmado { background-color: #4caf50; color: white; }
+        .status-provavel { background-color: #fbc02d; color: #333; }
+        .status-nao-confirmado { background-color: #f44336; color: white; }
+        .legenda { background: #f0f8f8; padding: 20px 30px; border-top: 1px solid #e0e0e0; font-size: 12px; }
+        .legenda-item { margin: 8px 0; }
+        .total { background: #e8f5f5; padding: 15px 30px; font-weight: 600; color: #1e5a5a; border-top: 2px solid #1e5a5a; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .total-item { padding: 10px; }
+        .export-button { background: #1e5a5a; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin: 20px 30px 0 30px; }
+        .export-button:hover { background: #0f3b3b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Planilha de Prospecção Médica</h1>
+            <p>XXVII COTECE - VII COLIG-CE | Fortaleza-CE, Setembro 2026</p>
+        </div>
+        <div class="info-box">
+            <div class="info-item"><strong>📅 Evento</strong><span>XXVII COTECE - VII COLIG-CE (I Simpósio Interdisciplinar de Lesões Esportivas)</span></div>
+            <div class="info-item"><strong>📍 Data e Local</strong><span>24-26 de Setembro de 2026 | Gran Mareiro Eventos - Fortaleza-CE</span></div>
+            <div class="info-item"><strong>👥 Total de Palestrantes</strong><span>36 Médicos Ortopedistas</span></div>
+            <div class="info-item"><strong>🎯 Produtos</strong><span>SEMTRI | TRIFOR</span></div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome Completo</th>
+                        <th>Especialidade</th>
+                        <th>Subespecialidade</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Instituição/Clínica</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Instagram</th>
+                        <th>CRM</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="nome">Roberto Oliveira</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro, Cotovelo, Traumatologia Desportiva</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Clínica Qorpo</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="nome">Clodoaldo Duarte</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Av. Santos Dumont 5753</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="nome">Igor de Lucena</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Rua Pereira Filgueiras 1817</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="nome">André Silveira</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Hospital São Camilo, Clínica Qorpo</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="nome">Marcel Rolim</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Centro Médico São Carlos, Clínica Don Victor</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="nome">Paulo Parente</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Consultório privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">◐ Provável</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="nome">Deginaldo Holanda</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Múltiplos hospitais</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="nome">Matheus Dantas</td>
+                        <td class="especialidade">—</td>
+                        <td class="especialidade">—</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="nome">Andrei Prado</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro, Cotovelo, Coluna</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>TraumaSport</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="nome">Caio Fábio</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo, Cirurgia Minimamente Invasiva</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Clínica Qorpo, Odonto Med Eusébio</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td class="nome">Heitor Dourado</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Vários consultórios</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td class="nome">Tairo Diógenes</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril, Prótese de Quadril</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Av. Rui Barbosa 1539</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td class="nome">Marcelo Cortez</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Centro do Joelho</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td class="nome">João Paulo Cortez</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Esporte</td>
+                        <td class="localidade">Fortaleza/SP</td>
+                        <td>CE/SP</td>
+                        <td>Hospital São Luiz (SP)</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td class="nome">Geraldo Neto</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Mão e Microcirurgia</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Múltiplos consultórios</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td class="nome">Victor Callado</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Centro do Joelho</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td class="nome">Victor Amon</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Coluna Vertebral</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Office Medical Center</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td class="nome">Ernane Osório</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Clínicas convênio</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td class="nome">Julio Parente</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril, Prótese</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Clínica privada</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td class="nome">Marcus Vinícius</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Coluna Vertebral</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">⚠ Risco Homônimo</span></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td class="nome">Lucas Melo</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Centro do Joelho</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td class="nome">Larissa Meireles</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ortopedia Geral</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td class="nome">Réjelos Lira</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Coluna, Endoscopia de Coluna</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>OTO CLÍNICA SUL, INSTITUTO FOT</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">⚠ Risco Homônimo</span></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td class="nome">Fabiana Freire</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Riomar Trade Center, Aldeota</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">⚠ Risco Homônimo</span></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td class="nome">Felipe Rocha</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Av. Antônio Sales 990</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td class="nome">Anderson Freitas</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril</td>
+                        <td class="localidade">Brasília</td>
+                        <td>DF</td>
+                        <td>Centro de Ortopedia e Traumatologia de Brasília</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-nao-confirmado">✗ Localidade Diferente</span></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td class="nome">Felipe Mendes</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Clínica Ortopédica São Mateus</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td class="nome">Rodrigo Linhartes</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Quadril, Gestor Hospitalar</td>
+                        <td class="localidade">Ceará</td>
+                        <td>CE</td>
+                        <td>HMDZAN (Diretor Executivo)</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">◐ Provável</span></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td class="nome">Goltemberg Feitoza</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ombro e Cotovelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td class="nome">Igor Rabelo</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Mão e Microcirurgia</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Av. Senador Virgílio Távora 195</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td class="nome">Cruz Júnior</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ortopedia/Acupuntura</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Privado</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">◐ Provável</span></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td class="nome">Leonardo Colares</td>
+                        <td class="especialidade">—</td>
+                        <td class="especialidade">—</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-nao-confirmado">✗ Não confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td class="nome">Luiz Holanda</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Pé e Tornozelo</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Dionísio Torres</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td class="nome">Marcos Aurélio</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Trauma, Esporte</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>Privado/Convênio</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td class="nome">Marcelo Parente</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Ortopedia Geral/Trauma</td>
+                        <td class="localidade">Barbalha/Recife</td>
+                        <td>CE/PE</td>
+                        <td>Federal University of Cariri</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-provavel">◐ Provável</span></td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td class="nome">Sidnei Torres</td>
+                        <td class="especialidade">Ortopedia/Traumatologia</td>
+                        <td class="especialidade">Joelho, Trauma</td>
+                        <td class="localidade">Fortaleza</td>
+                        <td>CE</td>
+                        <td>R. Vicente Leite 631, Meireles</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td class="em-branco">—</td>
+                        <td><span class="status status-confirmado">✓ Confirmado</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total">
+            <div class="total-item">📍 <strong>Fortaleza/CE:</strong> 34 médicos</div>
+            <div class="total-item">✅ <strong>Confirmados:</strong> 26 médicos</div>
+            <div class="total-item">◐ <strong>Prováveis:</strong> 6 médicos</div>
+            <div class="total-item">⚠️ <strong>Risco/Incertos:</strong> 4 médicos</div>
+        </div>
+
+        <div class="legenda">
+            <strong>Legenda de Status:</strong><br>
+            <div class="legenda-item">✓ <strong>Confirmado</strong> = Especialidade e localidade validadas com alta confiança</div>
+            <div class="legenda-item">◐ <strong>Provável</strong> = Informações com ligeira incerteza ou dados parciais</div>
+            <div class="legenda-item">⚠ <strong>Risco de Homônimo</strong> = Possibilidade de confusão com outro profissional, validar antes de contatar</div>
+            <div class="legenda-item">✗ <strong>Não Confirmado</strong> = Dados insuficientes para validação confiável</div>
+            <div class="legenda-item">— = <strong>Campos em Branco</strong> = Informações não obtidas durante a pesquisa (preencher manualmente)</div>
+        </div>
+
+        <button class="export-button" onclick="exportarCSV()">📥 Exportar como CSV (para Excel/Sheets)</button>
+    </div>
+
+    <script>
+        function exportarCSV() {
+            const table = document.querySelector('table');
+            let csv = [];
+
+            // Headers
+            const headers = Array.from(table.querySelectorAll('th')).map(th => th.textContent.trim());
+            csv.push(headers.join(','));
+
+            // Rows
+            table.querySelectorAll('tbody tr').forEach(row => {
+                const cells = Array.from(row.querySelectorAll('td')).map(td => {
+                    let text = td.textContent.trim();
+                    text = text.replace(/,/g, ';'); // Replace commas for CSV safety
+                    return `"${text}"`;
+                });
+                csv.push(cells.join(','));
+            });
+
+            // Download
+            const csvContent = csv.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'prospeccao_medicos_cotece_2026.csv');
+            link.click();
+        }
+    </script>
+</body>
+</html>

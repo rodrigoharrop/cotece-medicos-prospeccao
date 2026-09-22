@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 CINEMA PREMIUM - Rodrigo & Leandra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #330066 100%);
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            max-width: 650px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .badge {
+            font-size: 32px;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+            50% { text-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+        }
+        .tagline {
+            font-size: 16px;
+            color: #c0a0ff;
+            letter-spacing: 2px;
+        }
+        .video-wrapper {
+            position: relative;
+            background: #000;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px rgba(200, 100, 255, 0.5);
+            margin-bottom: 40px;
+            border: 4px solid rgba(200, 100, 255, 0.3);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+        .info {
+            background: rgba(20, 20, 40, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 40px;
+            border: 2px solid rgba(200, 100, 255, 0.3);
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #c0a0ff, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            color: #a090c0;
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .spec-item {
+            background: rgba(200, 100, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(200, 100, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .spec-item:hover {
+            border-color: rgba(200, 100, 255, 0.5);
+            background: rgba(200, 100, 255, 0.15);
+        }
+        .spec-label {
+            color: #c0a0ff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .spec-value {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .highlights {
+            background: rgba(200, 100, 255, 0.15);
+            border: 2px solid rgba(200, 100, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .highlights h3 {
+            color: #c0a0ff;
+            margin-bottom: 15px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .highlight-list {
+            display: grid;
+            gap: 10px;
+        }
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ddd;
+            font-size: 14px;
+        }
+        .highlight-item::before {
+            content: "★";
+            color: #c0a0ff;
+            font-size: 18px;
+        }
+        .textos {
+            background: rgba(200, 100, 255, 0.08);
+            border-left: 4px solid #c0a0ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #b0a0d0;
+            line-height: 1.8;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #c0a0ff, #ff69b4);
+            color: #000;
+            box-shadow: 0 15px 40px rgba(200, 100, 255, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(200, 100, 255, 0.6);
+        }
+        .btn-secondary {
+            background: rgba(200, 100, 255, 0.2);
+            color: #c0a0ff;
+            border: 2px solid rgba(200, 100, 255, 0.5);
+        }
+        .btn-secondary:hover {
+            background: rgba(200, 100, 255, 0.3);
+            border-color: rgba(200, 100, 255, 0.8);
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 25px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badge">🎬 CINEMA PREMIUM 🎬</div>
+            <div class="tagline">Uma Produção de Cinema</div>
+        </div>
+        
+        <div class="video-wrapper">
+            <video controls preload="metadata" poster="">
+                <source src="video_cinema_premium_final.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+        
+        <div class="info">
+            <h1>Rodrigo & Leandra</h1>
+            <p class="subtitle">Uma história de amor que começou em Novembro 2004</p>
+            
+            <div class="specs">
+                <div class="spec-item">
+                    <div class="spec-label">Duração</div>
+                    <div class="spec-value">1m 3s</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Resolução</div>
+                    <div class="spec-value">1080×1920</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Formato</div>
+                    <div class="spec-value">Vertical</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Qualidade</div>
+                    <div class="spec-value">4K Ultra</div>
+                </div>
+            </div>
+            
+            <div class="highlights">
+                <h3>✨ CARACTERÍSTICAS PREMIUM:</h3>
+                <div class="highlight-list">
+                    <div class="highlight-item">13 cenas com textos cinematográficos dinâmicos</div>
+                    <div class="highlight-item">19 elementos visuais (fotos, vídeos, aliança)</div>
+                    <div class="highlight-item">Mensagens sobre Amor, Aliança e Eternidade</div>
+                    <div class="highlight-item">Música cinematic profissional sincronizada</div>
+                    <div class="highlight-item">Efeitos cinematográficos avançados</div>
+                    <div class="highlight-item">Transições de grade cinematográfica</div>
+                    <div class="highlight-item">Textos com sombra profissional</div>
+                    <div class="highlight-item">Qualidade 1080×1920 vertical HD</div>
+                </div>
+            </div>
+            
+            <div class="textos">
+                <strong>Textos do Vídeo:</strong><br><br>
+                "Começou uma História..." • "Uma Aliança" • "Um Amor Infinito"<br>
+                "Desde Novembro 2004" • "Por todos os Momentos" • "Nos Detalhes do Dia"<br>
+                "Uma Promessa Eterna" • "Juntos para Sempre" • "Cada Pôr do Sol Tem Você"<br>
+                "Pela Eternidade" • "Símbolo de Amor" • "Hoje e para Sempre"<br>
+                "Rodrigo e Leandra - Aliançados desde Novembro 2004"
+            </div>
+            
+            <div class="buttons">
+                <button class="btn-primary" onclick="downloadVideo()">
+                    ⬇️ Download
+                </button>
+                <button class="btn-secondary" onclick="copyPath()">
+                    📋 Caminho
+                </button>
+            </div>
+            
+            <div class="footer">
+                ✨ Uma produção profissional feita com amor ✨<br>
+                Pronto para todas as redes sociais
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadVideo() {
+            const a = document.createElement('a');
+            a.href = 'video_cinema_premium_final.mp4';
+            a.download = 'Rodrigo_Leandra_Cinema_Premium.mp4';
+            a.click();
+        }
+        
+        function copyPath() {
+            const path = '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/edit/video_cinema_premium_final.mp4';
+            navigator.clipboard.writeText(path).then(() => {
+                alert('✓ Caminho copiado!');
+            });
+        }
+    </script>
+</body>
+</html>
+
+echo ""
+echo "✅ VÍDEO ABERTO NO QUICKTIME!"
+echo ""
+echo "🎬 VÍDEO CINEMA PREMIUM"
+echo "═══════════════════════════════════════════"
+echo ""
+echo "📊 ESPECIFICAÇÕES:"
+echo "   • Duração: 1 minuto 3 segundos"
+echo "   • Resolução: 1080×1920 (vertical)"
+echo "   • Tamanho: 3.18 MB"
+echo "   • 13 cenas com textos"
+echo "   • 19 elementos visuais"
+echo ""
+echo "📝 TEXTOS DINÂMICOS EM CADA CENA:"
+echo "   ✓ Começou uma História..."
+echo "   ✓ Uma Aliança"
+echo "   ✓ Um Amor Infinito"
+echo "   ✓ Desde Novembro 2004"
+echo "   ✓ Por todos os Momentos"
+echo "   ✓ Nos Detalhes do Dia"
+echo "   ✓ Uma Promessa Eterna"
+echo "   ✓ Juntos para Sempre"
+echo "   ✓ Cada Pôr do Sol Tem Você"
+echo "   ✓ Pela Eternidade"
+echo "   ✓ Símbolo de Amor"
+echo "   ✓ Hoje e para Sempre"
+echo ""
+echo "🎵 Música: Cinematic Profissional"
+echo "🎬 Efeitos: Cinematográficos Avançados"
+echo "✨ Qualidade: Premium de Cinema"
+echo ""

@@ -1,0 +1,25 @@
+{
+  "name": "caravana-profetica-2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx remotion studio",
+    "preview": "npx remotion studio src/index.tsx",
+    "render": "npx remotion render src/index.tsx CaravanaProfetica out/caravana-profetica-2026.mp4",
+    "render:vertical": "npx remotion render src/index.tsx CaravanaProfeticaVertical out/caravana-profetica-vertical.mp4",
+    "render:reels": "npx remotion render src/index.tsx CaravanaProfeticaReels out/caravana-profetica-reels.mp4",
+    "render:all": "npm run render && npm run render:vertical && npm run render:reels",
+    "render:tabernaculos": "npx remotion render src/index.tsx TabernaculosProfeticos out/caravana-tabernaculos-2026.mp4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.458",
+    "@remotion/player": "^4.0.458",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "remotion": "^4.0.458"
+  }
+}

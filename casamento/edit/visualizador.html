@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casamento - Rodrigo & Leandra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+        
+        .info {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .detail-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .detail-label {
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .detail-value {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-share {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-share:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .features {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            color: #aaa;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .feature::before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-wrapper">
+            <video controls preload="metadata">
+                <source src="video_com_musica.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeo.
+            </video>
+        </div>
+        
+        <div class="info">
+            <h1>💍 Casamento</h1>
+            <p class="subtitle">Rodrigo & Leandra | Novembro 2004</p>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <div class="detail-label">Duração</div>
+                    <div class="detail-value">40s</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Resolução</div>
+                    <div class="detail-value">1080×1920</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Formato</div>
+                    <div class="detail-value">Vertical</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Tamanho</div>
+                    <div class="detail-value">3.27 MB</div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature">12 fotos</div>
+                <div class="feature">Música</div>
+                <div class="feature">Efeitos</div>
+                <div class="feature">Texto</div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn-download" onclick="downloadVideo()">
+                    ⬇️ Download
+                </button>
+                <button class="btn-share" onclick="copyPath()">
+                    📋 Copiar Caminho
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadVideo() {
+            const a = document.createElement('a');
+            a.href = 'video_com_musica.mp4';
+            a.download = 'casamento_rodrigo_leandra.mp4';
+            a.click();
+        }
+        
+        function copyPath() {
+            const path = '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/edit/video_com_musica.mp4';
+            navigator.clipboard.writeText(path).then(() => {
+                alert('Caminho copiado para a área de transferência!');
+            });
+        }
+    </script>
+</body>
+</html>

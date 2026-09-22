@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts de Gravação - Rota das Emoções</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f5f5f5;
+        }
+
+        .page {
+            background: white;
+            width: 210mm;
+            height: 297mm;
+            margin: 20px auto;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+
+        .cover {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: linear-gradient(135deg, #1a3a3a 0%, #2d5f5f 100%);
+            color: white;
+        }
+
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cover h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .cover .info {
+            margin-top: 60px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .header {
+            border-bottom: 3px solid #2d5f5f;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1a3a3a;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .script-block {
+            margin-bottom: 40px;
+            border-left: 4px solid #2d5f5f;
+            padding-left: 20px;
+            page-break-inside: avoid;
+        }
+
+        .script-number {
+            background: #2d5f5f;
+            color: white;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .script-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a3a3a;
+            margin-bottom: 15px;
+        }
+
+        .script-subtitle {
+            font-size: 12px;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2d5f5f;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .section-content {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #333;
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .visual {
+            background: #f0f0f0;
+            border-left: 3px solid #d4a574;
+            padding: 10px 12px;
+        }
+
+        .audio {
+            background: #f0f5ff;
+            border-left: 3px solid #2d5f5f;
+            padding: 10px 12px;
+        }
+
+        .cta {
+            background: #e8f4f1;
+            border-left: 3px solid #16a085;
+            padding: 10px 12px;
+            font-weight: 600;
+        }
+
+        .checklist {
+            margin-top: 40px;
+            page-break-inside: avoid;
+        }
+
+        .checklist h2 {
+            font-size: 20px;
+            color: #1a3a3a;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2d5f5f;
+            padding-bottom: 10px;
+        }
+
+        .checklist-item {
+            font-size: 13px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checklist-item input {
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+
+        .tips {
+            background: #fff9e6;
+            border: 1px solid #d4a574;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 13px;
+            page-break-inside: avoid;
+        }
+
+        .tips h3 {
+            color: #8b6914;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 11px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .public-tag {
+            display: inline-block;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .tag-premium {
+            background: #e8d7c3;
+            color: #5c3d2e;
+        }
+
+        .tag-elderly {
+            background: #d4e8d4;
+            color: #2d5c2d;
+        }
+
+        .tag-b2b {
+            background: #c3d7e8;
+            color: #1a3a5c;
+        }
+
+        .tag-all {
+            background: #e8c3d4;
+            color: #5c1a3a;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="page cover">
+    <h1>🎬 Scripts de Gravação</h1>
+    <h2>Rota das Emoções 2026</h2>
+    <p style="font-size: 18px; margin-top: 30px;">Nordeste Off Road</p>
+    <div class="info">
+        <p>📱 Formato: Vertical (9:16)</p>
+        <p>⏱️ Duração: 15-30 segundos por vídeo</p>
+        <p>🎥 Estilo: Dinâmico, cortes rápidos, som ambiente premium</p>
+    </div>
+</div>
+
+<!-- INSTRUÇÕES GERAIS -->
+<div class="page">
+    <div class="header">
+        <h1>📋 Como Usar Este Documento</h1>
+        <p>Guia prático para gravação dos anúncios</p>
+    </div>
+
+    <h3 style="color: #1a3a3a; margin: 20px 0 15px 0;">📌 Antes de Começar</h3>
+    <div class="tips">
+        <h3>Checklist Pré-Gravação</h3>
+        <div class="checklist-item"><input type="checkbox"> Smartphone carregado 100%</div>
+        <div class="checklist-item"><input type="checkbox"> Tripé/suporte ajustado</div>
+        <div class="checklist-item"><input type="checkbox"> Áudio ambiente limpo (sem barulhos excessivos)</div>
+        <div class="checklist-item"><input type="checkbox"> Boa iluminação (final da tarde é ideal)</div>
+        <div class="checklist-item"><input type="checkbox"> Formato vertical (9:16) na câmera</div>
+        <div class="checklist-item"><input type="checkbox"> Celular em Modo Avião (após ligar câmera)</div>
+    </div>
+
+    <h3 style="color: #1a3a3a; margin: 20px 0 15px 0;">💡 Dicas de Gravação</h3>
+    <div class="tips">
+        <h3>Para Melhor Qualidade</h3>
+        <ul style="margin-left: 20px;">
+            <li><strong>Tom natural:</strong> Fale com entusiasmo, mas sem exagero</li>
+            <li><strong>3 takes:</strong> Grave 3 vezes cada cena para escolher a melhor</li>
+            <li><strong>Movimento:</strong> Caminhe, vire para câmera, crie dinâmica</li>
+            <li><strong>Enquadre:</strong> Seu rosto ocupando 1/3 inferior da tela</li>
+            <li><strong>Pausa final:</strong> Deixe 2-3 segundos de silêncio após falar</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Rota das Emoções 2026 | Nordeste Off Road | Agosto 2026
+    </div>
+</div>
+
+<!-- SCRIPT 1 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 1: O Teaser da Expedição</h1>
+        <p>Objetivo: Despertar o desejo e mostrar a magnitude da viagem</p>
+    </div>
+
+    <div class="public-tag tag-all">Público Geral</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 01</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            Montagem rápida: 4x4 atravessando água, dunas brancas, brinde com champagne/espumante, revoada de pássaros vermelhos (guarás). Cortes dinâmicos, transições suaves.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Olá! Eu sou [Seu Nome] e estou aqui para te convidar a uma experiência que redefine o conceito de viajar. Três estados, 11 dias e a Rota das Emoções com a Nordeste Off Road. Do Maranhão ao Ceará, em um roteiro privado desenhado para quem, como você, não aceita o comum."</strong>
+        </div>
+
+        <div class="section-label">🔗 Call-to-Action</div>
+        <div class="section-content cta">
+            "Clique agora e descubra o itinerário completo."
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            20-25 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 2 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 2: São Luís</h1>
+        <p>Objetivo: Mostrar o ponto de partida e o valor histórico</p>
+    </div>
+
+    <div class="public-tag tag-all">Público Geral</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 02</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            Caminhada pelo Centro Histórico de São Luís. Close nos detalhes: azulejos portugueses, arquitetura colonial. Detalhes das fachadas, ruas calçadas. Você em movimento, explorando, apontando para detalhes.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Nossa jornada começa aqui, em São Luís, onde a história e o charme se encontram. A capital dos azulejos nos convida a um mergulho na cultura lusitana, antes de seguirmos para a natureza selvagem. Para nós da Nordeste Off Road, a exclusividade começa nos detalhes, desde o primeiro passo da sua viagem."</strong>
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            25-30 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 3 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 3: Lençóis Maranhenses</h1>
+        <p>Objetivo: Focar na capacidade técnica e na beleza das dunas</p>
+    </div>
+
+    <div class="public-tag tag-all">Público Geral</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 03</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            Close nos pneus do 4x4 na areia. O carro subindo a duna com movimento. Vista panorâmica da Lagoa Bonita. Você dentro/fora do carro em movimento. Drone shot (se possível) mostrando a paisagem épica.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Aqui nos Lençóis Maranhenses, a força do nosso 4x4 encontra a delicadeza das lagoas cristalinas. Com a Nordeste Off Road, você tem a segurança de quem conhece cada duna desde 2003. A aventura é privada, o cenário é só seu, e a experiência, inesquecível."</strong>
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            30 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 4 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 4: Atins</h1>
+        <p>Objetivo: Destacar o diferencial de luxo e exclusividade</p>
+    </div>
+
+    <div class="public-tag tag-premium">B2C Premium</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 04</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            Mesa de frios montada sobre o capô do carro ou na areia (mise en place premium). Garrafa de espumante sendo aberta (ou suco gourmet). Sol se pondo ao fundo com cores avermelhadas. Você brindando com a paisagem. Close na garrafa, nos petiscos, no pôr do sol.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Imagine terminar o dia aqui, no coração dos Grandes Lençóis, com um brinde de espumante e uma mesa de frios preparada especialmente para você. Isso não é apenas um passeio, é um momento inesquecível em Atins, o ápice da exclusividade que a Nordeste Off Road proporciona."</strong>
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            20-25 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 5 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 5: Delta das Américas</h1>
+        <p>Objetivo: Mostrar a biodiversidade e o espetáculo natural</p>
+    </div>
+
+    <div class="public-tag tag-all">Público Geral</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 05</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            Lancha/barco cortando o rio em movimento. Manguezais ao fundo. Céu ficando vermelho/alaranjado. MOMENTO-CHAVE: Revoada de guarás (pássaros vermelhos) voando. Você observando o espetáculo. Close em seu rosto de admiração. Natureza em primeiro plano.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Aqui no Delta das Américas, somos presenteados com o espetáculo da vida. Navegamos pelos manguezais para presenciar a mágica revoada dos Guarás. Um encontro íntimo com a natureza em seu estado mais puro, com todo o conforto e exclusividade que você merece."</strong>
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            25-30 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 6 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 6: Jericoacoara</h1>
+        <p>Objetivo: Focar no destino mais desejado e nos clubes exclusivos</p>
+    </div>
+
+    <div class="public-tag tag-all">Público Geral</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 06</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            3 planos diferentes: (1) Exterior do Alchymist Club com você; (2) Águas cristalinas do Buraco Azul, close na água turquesa; (3) Você em rede na Lagoa da Torta, relaxando. Iluminação dourada, ambiente luxuoso e tranquilo. Detalhes de conforto e beleza.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Jeri como você nunca viu. Do relaxamento nas redes da Lagoa da Torta ao luxo exclusivo do Alchymist Club, a Nordeste Off Road leva você aos pontos mais cobiçados com total privacidade. O paraíso é aqui, e nós garantimos que sua experiência seja impecável."</strong>
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            20-25 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 7 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 7: B2B</h1>
+        <p>Objetivo: Captar parceiros comerciais (Agências e Operadoras)</p>
+    </div>
+
+    <div class="public-tag tag-b2b">B2B - Agências</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 07</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            Bastidores da operação: guias certificados em ação, frota impecável (vista dos carros), logo da ABETA (se aplicável), detalhe de equipamento profissional. Você falando direto para câmera, tom profissional e confiante.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"Para você, agente de viagens ou operadora, que busca um parceiro de confiança no Nordeste, a Nordeste Off Road é a sua DMC. Somos especialistas em expedições privadas, oferecendo logística impecável, segurança certificada e experiências que encantam seus clientes mais exigentes. Que tal crescermos juntos?"</strong>
+        </div>
+
+        <div class="section-label">🔗 Call-to-Action</div>
+        <div class="section-content cta">
+            "Clique e solicite nosso tarifário para agências."
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            20-25 segundos
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT 8 -->
+<div class="page">
+    <div class="header">
+        <h1>Script 8: Fechamento</h1>
+        <p>Objetivo: Conversão direta - Call-to-Action final</p>
+    </div>
+
+    <div class="public-tag tag-all">Público Geral</div>
+
+    <div class="script-block">
+        <span class="script-number">SCRIPT 08</span>
+
+        <div class="section-label">🎥 Visual Esperado</div>
+        <div class="section-content visual">
+            4x4 seguindo em movimento em direção ao horizonte na praia. Pôr do sol ou amanhecer. Você dentro do carro, de óculos, sorrindo, relaxado. Movimento de câmera acompanhando o carro. Cenário épico, inspirador, aspiracional.
+        </div>
+
+        <div class="section-label">🎙️ Áudio (Sua Fala)</div>
+        <div class="section-content audio">
+            <strong>"A Rota das Emoções espera por você. Eu te convido a reservar sua expedição privada 2026 com a Nordeste Off Road, a sua referência em aventura de luxo. Venha viver experiências que ficam na memória!"</strong>
+        </div>
+
+        <div class="section-label">🔗 Call-to-Action</div>
+        <div class="section-content cta">
+            "Clique agora no botão abaixo e fale com nossos consultores."
+        </div>
+
+        <div class="section-label">⏱️ Duração Recomendada</div>
+        <div class="section-content">
+            15-20 segundos
+        </div>
+    </div>
+</div>
+
+<!-- RESUMO E PRÓXIMAS ETAPAS -->
+<div class="page">
+    <div class="header">
+        <h1>✅ Resumo de Gravação</h1>
+        <p>Checklist completo antes de enviar os arquivos</p>
+    </div>
+
+    <h3 style="color: #1a3a3a; margin: 20px 0 15px 0;">📹 Vídeos a Gravar</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+        <tr style="background: #f0f0f0;">
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: left; font-weight: 600;">Script</th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: left; font-weight: 600;">Locação</th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: left; font-weight: 600;">Duração</th>
+            <th style="border: 1px solid #ddd; padding: 10px; text-align: center; font-weight: 600;">✓</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 01</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Teaser (montagem de locações)</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">20-25s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 02</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">São Luís Centro Histórico</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">25-30s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 03</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Lençóis Maranhenses</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">30s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 04</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Atins (pôr do sol + brinde)</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">20-25s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 05</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Delta das Américas (guarás)</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">25-30s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 06</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Jericoacoara (Alchymist + Lagoa)</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">20-25s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 07</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">B2B (bastidores operação)</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">20-25s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+        <tr style="background: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 10px;">Script 08</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">Fechamento (praia + horizonte)</td>
+            <td style="border: 1px solid #ddd; padding: 10px;">15-20s</td>
+            <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">☐</td>
+        </tr>
+    </table>
+
+    <h3 style="color: #1a3a3a; margin: 30px 0 15px 0;">📤 Envio de Arquivos</h3>
+    <div class="tips">
+        <h3>Após Gravar</h3>
+        <ul style="margin-left: 20px;">
+            <li><strong>Formato:</strong> MP4 vertical (9:16)</li>
+            <li><strong>Qualidade:</strong> Full HD (1080x1920) mínimo</li>
+            <li><strong>Armazenamento:</strong> Google Drive ou Dropbox</li>
+            <li><strong>Pasta:</strong> Nordeste_Off_Road_Videos_Brutos</li>
+            <li><strong>Nome dos arquivos:</strong> S01_Teaser.mp4, S02_SaoLuis.mp4, etc.</li>
+            <li><strong>Contato:</strong> Enviar link compartilhado para [coordenador]</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Rota das Emoções 2026 | Nordeste Off Road | Data Gravação: 03-13 Agosto 2026
+    </div>
+</div>
+
+</body>
+</html>

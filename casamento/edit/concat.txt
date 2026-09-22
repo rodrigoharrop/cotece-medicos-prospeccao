@@ -1,0 +1,24 @@
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/2016-04-20 14.51.20.jpg'
+duration 3.0
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/2016-04-27 14.29.48.jpg'
+duration 2.5
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130523.jpg'
+duration 3.5
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130550.jpg'
+duration 3.0
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130635.jpg'
+duration 3.5
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130932.jpg'
+duration 2.5
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131027.jpg'
+duration 2.0
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131141.jpg'
+duration 4.0
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131244.jpg'
+duration 3.5
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131450.jpg'
+duration 3.0
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131508.jpg'
+duration 3.5
+file '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131612.jpg'
+duration 5.0

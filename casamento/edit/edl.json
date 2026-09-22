@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "metadata": {
+    "title": "Casamento - Montagem Rom\u00e2ntica",
+    "duracao_total": 39.0,
+    "fps": 30,
+    "resolucao": "1080x1920",
+    "data_criacao": "2026-08-31T11:56:32.685330"
+  },
+  "sequencia": [
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/2016-04-20 14.51.20.jpg",
+      "duracao": 3.0,
+      "efeito": "ken_burns_in",
+      "beat": "ABERTURA - Detalhe/Alian\u00e7a"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/2016-04-27 14.29.48.jpg",
+      "duracao": 2.5,
+      "efeito": "fade",
+      "beat": "Prepara\u00e7\u00e3o"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130523.jpg",
+      "duracao": 3.5,
+      "efeito": "ken_burns_slow",
+      "beat": "VERSO 1 - Casal"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130550.jpg",
+      "duracao": 3.0,
+      "efeito": "zoom",
+      "beat": "Momentos"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130635.jpg",
+      "duracao": 3.5,
+      "efeito": "ken_burns_out",
+      "beat": "Conex\u00e3o"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_130932.jpg",
+      "duracao": 2.5,
+      "efeito": "fade_fast",
+      "beat": "PR\u00c9-REFR\u00c3O - Ritmo"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131027.jpg",
+      "duracao": 2.0,
+      "efeito": "zoom_in",
+      "beat": "Acelera\u00e7\u00e3o"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131141.jpg",
+      "duracao": 4.0,
+      "efeito": "ken_burns_slow",
+      "beat": "REFR\u00c3O - Emo\u00e7\u00e3o"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131244.jpg",
+      "duracao": 3.5,
+      "efeito": "parallax",
+      "beat": "Momento"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131450.jpg",
+      "duracao": 3.0,
+      "efeito": "zoom",
+      "beat": "Clima"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131508.jpg",
+      "duracao": 3.5,
+      "efeito": "ken_burns_slow",
+      "beat": "VERSO 2 - Calma"
+    },
+    {
+      "foto": "/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/20160420_131612.jpg",
+      "duracao": 5.0,
+      "efeito": "ken_burns_out",
+      "beat": "ENCERRAMENTO"
+    }
+  ],
+  "efeitos": {
+    "ken_burns_in": "Zoom lento de entrada",
+    "ken_burns_out": "Zoom lento de sa\u00edda",
+    "ken_burns_slow": "Zoom panor\u00e2mico lento",
+    "fade": "Crossfade suave (0.5s)",
+    "fade_fast": "Fade r\u00e1pido (0.3s)",
+    "zoom": "Zoom gradual",
+    "zoom_in": "Zoom r\u00e1pido de entrada",
+    "parallax": "Efeito parallax"
+  },
+  "grade": "warm_cinematic",
+  "music": null
+}

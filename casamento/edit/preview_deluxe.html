@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💎 Casamento DELUXE - Rodrigo & Leandra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #2a0845 100%);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        .badge {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            letter-spacing: 2px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .video-wrapper {
+            position: relative;
+            background: #000;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 30px 100px rgba(255, 215, 0, 0.4);
+            margin-bottom: 35px;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: #aaa;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .spec-item {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+        }
+        .spec-label {
+            color: #FFD700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .spec-value {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .features {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            color: #ccc;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature::before {
+            content: "✓";
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .highlight {
+            background: rgba(255, 215, 0, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #FFD700;
+        }
+        .highlight h3 {
+            color: #FFD700;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.5);
+        }
+        .btn-secondary {
+            background: rgba(255, 215, 0, 0.15);
+            color: #FFD700;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 215, 0, 0.25);
+        }
+        .note {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">💎 VERSÃO DELUXE 💎</div>
+        
+        <div class="video-wrapper">
+            <video controls preload="metadata">
+                <source src="video_deluxe_com_texto.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+        
+        <div class="info">
+            <h1>Rodrigo & Leandra</h1>
+            <p class="subtitle">Aliançados desde Novembro 2004</p>
+            
+            <div class="specs">
+                <div class="spec-item">
+                    <div class="spec-label">Duração</div>
+                    <div class="spec-value">50s</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Resolução</div>
+                    <div class="spec-value">1080×1920</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Formato</div>
+                    <div class="spec-value">Vertical</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Tamanho</div>
+                    <div class="spec-value">2.66 MB</div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>✨ NOVO NESTA VERSÃO:</h3>
+                • Vídeo de céu romantico (4s)<br>
+                • Foto especial do casal (2016-04-27)<br>
+                • Mais efeitos cinematográficos<br>
+                • 19 elementos visuais totais
+            </div>
+            
+            <div class="features">
+                <div class="feature">Vídeo céu</div>
+                <div class="feature">19 imagens</div>
+                <div class="feature">Aliança</div>
+                <div class="feature">Praia</div>
+                <div class="feature">Efeitos</div>
+                <div class="feature">Transições</div>
+                <div class="feature">Música</div>
+                <div class="feature">Texto</div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn-primary" onclick="downloadVideo()">
+                    ⬇️ Download
+                </button>
+                <button class="btn-secondary" onclick="copyPath()">
+                    📋 Caminho
+                </button>
+            </div>
+            
+            <div class="note">
+                ✨ Pronto para Instagram, TikTok, Reels, WhatsApp e todas as redes sociais
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadVideo() {
+            const a = document.createElement('a');
+            a.href = 'video_deluxe_com_texto.mp4';
+            a.download = 'casamento_rodrigo_leandra_deluxe.mp4';
+            a.click();
+        }
+        
+        function copyPath() {
+            const path = '/Users/rodrigoharrop/PROJETOS CLOUDE/casamento/edit/video_deluxe_com_texto.mp4';
+            navigator.clipboard.writeText(path).then(() => {
+                alert('✓ Caminho copiado!');
+            });
+        }
+    </script>
+</body>
+</html>

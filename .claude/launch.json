@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "xdreamstravel",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/rodrigoharrop/PROJETOS CLOUDE/xdreamstravel", "run", "dev"],
+      "port": 8080,
+      "autoPort": false
+    },
+    {
+      "name": "dra-isabele",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/rodrigoharrop/PROJETOS CLOUDE/Dra Isabele/site", "run", "dev"],
+      "port": 3457,
+      "autoPort": true
+    }
+  ]
+}

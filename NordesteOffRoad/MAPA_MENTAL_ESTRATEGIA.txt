@@ -1,0 +1,277 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║           MAPA MENTAL — ROTA DAS EMOÇÕES 2026 (Campanha Lean)                   ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+                          🎯 OBJETIVO CENTRAL
+                   Gerar 20-30 leads em 30 dias
+                    com R$ 2.000 de investimento
+                             │
+                ┌────────────┼────────────┐
+                │            │            │
+          👥 PÚBLICO    🎬 CONTEÚDO   📊 ESTRATÉGIA
+                │            │            │
+         ┌──────┴──────┐     │      ┌─────┴─────┐
+         │             │     │      │           │
+      B2C       B2B    │     │  TOPO(Atração) FUNDO(Conv)
+    Premium  Agências  │     │  R$500/10d   R$400/5d
+         │             │     │      │           │
+    35-75 anos    Tour   │  Video  Carousel   CTA
+    Empresários   Ops    │  Teaser  +        WhatsApp
+    3ª Idade       │     │  (20s)   Fotos    (20s)
+    Func. Pub.    Com    │          (30s)       │
+         │        Agências         │           │
+         └─────┬──────┘            │           │
+               │          MEIO (Consideração)  │
+               │            R$600/15d          │
+               │                │              │
+               │            Video Feed       │
+               │            + Carrossel    │
+               │            (45s)            │
+               │                │              │
+               └────────────┬───┴──────────────┘
+                            │
+                      📱 META ADS
+                    Instagram + Facebook
+                            │
+                 ┌──────────┬┴────────┬──────────┐
+                 │          │        │          │
+            CPM:  CTR:     CPC:     CPL:    Video %:
+            R$8-12 1.5-3%  R$15-25  R$66-100 30%+
+                 │          │        │          │
+                 └──────────┬┴────────┴──────────┘
+                            │
+                            ▼
+                   📊 RASTREAMENTO
+                   (Pixel + CAPI)
+                            │
+                ┌───────────┼────────────┐
+                │           │            │
+           LEADS       CONVERSÃO   REMARKETING
+          (20-30)       (3-5)      (5k+ audience)
+            │              │            │
+         Formulário    Reservas    Retargeting
+         +WhatsApp     Confirmadas  Semana 3-4
+            │              │            │
+            └───────────┬───┴────────────┘
+                        │
+                   📈 KPIs SEMANAIS
+          (Relatório toda segunda)
+                        │
+                        ▼
+            OTIMIZAÇÃO & SCALE
+        (Pausar baixo CPL, aumentar bom)
+                        │
+                        ▼
+                  SEMANA 5
+            ANÁLISE FINAL + ROI
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                           📅 CRONOGRAMA 30 DIAS
+
+    AGOSTO 2026                    SETEMBRO 2026
+    └─ 28/07-02: ✅ ESTRATÉGIA    └─ 24/08-30: 📊 TOPO
+       └─ 03-13: 🎬 GRAVAÇÃO          └─ 31-06: 🔧 OTIMIZA
+       └─ 14-20: ✂️  EDIÇÃO           └─ 07-20: 📈 SCALE
+       └─ 21-23: ⚙️  SETUP            └─ 21-30: 🎯 ANÁLISE
+       └─ 24: 🚀 GO-LIVE
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                        🎬 CONTEÚDO A GRAVAR (Nativo)
+
+    6 VÍDEOS CURTOS (Tour Leader com celular)
+    ┌─────────────────────────────────────────┐
+    │ S01: Teaser (20s)       │ S04: Atins (20s)
+    │ "Oi! Vem conhecer..."   │ "Brinde no pôr do sol"
+    │                          │
+    │ S02: São Luís (25s)     │ S05: Delta (25s)
+    │ "Centro histórico"      │ "Guarás voando"
+    │                          │
+    │ S03: Lençóis (30s)      │ S06: Jeri (20s)
+    │ "4x4 na areia"          │ "Lagoa relax"
+    └─────────────────────────────────────────┘
+
+    5-6 FOTOS (das locações)
+    ├─ São Luís (azulejos)
+    ├─ Lençóis (lagoa + duna)
+    ├─ Atins (brinde + pôr do sol)
+    ├─ Delta (rio + guarás)
+    └─ Jeri (praia + lagoa)
+
+    CRIAÇÃO (Canva - 10 min)
+    ├─ 3 gráficos com citações
+    └─ Pronto para anúncios
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                      💰 INVESTIMENTO BREAKDOWN
+
+    Total: R$ 2.000
+    │
+    ├─ 75% → Anúncios Meta (R$ 1.500)
+    │   ├─ Semana 1-2: R$ 500 (Topo — awareness)
+    │   ├─ Semana 3-4: R$ 600 (Meio — consideração)
+    │   └─ Semana 5: R$ 400 (Fundo — conversão + urgência)
+    │
+    ├─ 10% → Edição vídeos (R$ 200)
+    │   └─ Freelancer OU você mesmo (4-5h)
+    │
+    ├─ 5% → Criativos Canva (R$ 100)
+    │   └─ 3 gráficos de citação (grátis se usar template)
+    │
+    └─ 10% → Contingency (R$ 200)
+        └─ Imprevistos, ajustes, testes
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                    🎯 FLUXO DE CONVERSÃO (FUNIL)
+
+
+    TOPO (Atração)
+    ═══════════════════════════════════════════════
+    │ Anúncio: "Rota das Emoções" (teaser visual)
+    │ Público: Interesses (viagens luxo, 4x4)
+    │ Budget: R$ 500 / 10 dias
+    │ Criativo: Vídeo Atins (pôr do sol)
+    │ CTA: "Saiba Mais"
+    │
+    │ Meta: 2.000+ impressões, 30%+ VTR
+    │
+    ▼ Resultado: 100-150 pessoas clicam
+
+
+    MEIO (Consideração)
+    ═══════════════════════════════════════════════
+    │ Anúncio: "Conheça cada locação" (carousel)
+    │ Público: Visitantes do site (Pixel)
+    │ Budget: R$ 600 / 15 dias
+    │ Criativo: 5 fotos (São Luís→Lençóis→Atins→Delta→Jeri)
+    │ CTA: "Reserve Sua Data"
+    │
+    │ Meta: 50-80 pessoas visitam landing page
+    │
+    ▼ Resultado: 30-50 pessoas preenchem formulário
+
+
+    FUNDO (Conversão)
+    ═══════════════════════════════════════════════
+    │ Anúncio: "Últimas vagas 2026" (urgência)
+    │ Público: Visitantes site + formulário (Remarketing)
+    │ Budget: R$ 400 / 5 dias (FINAL PUSH)
+    │ Criativo: Vídeo CTA (Tour Leader falando)
+    │ CTA: "Fale no WhatsApp"
+    │
+    │ Meta: 20-30 cliques WhatsApp
+    │
+    ▼ Resultado: LEADS QUALIFICADOS
+
+
+    PÓS-CONVERSÃO (Tour Leader)
+    ═══════════════════════════════════════════════
+    │ WhatsApp: Tour Leader responde <1h
+    │ Pergunta: "Qual sua melhor data? Quantas pessoas?"
+    │ Oferta: Enviar itinerário completo
+    │ Follow-up: Email com proposta em 24h
+    │
+    ▼ Resultado: 3-5 RESERVAS CONFIRMADAS
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                   👥 SEGMENTAÇÃO & MENSAGEM
+
+
+    CAMPANHA 1: TOPO (DESCOBERTA)
+    ┌─────────────────────────────────────────────┐
+    │ Público: Amplo (35-75 anos, viagens luxo)   │
+    │ Mensagem: "Descubra a Rota das Emoções"     │
+    │ Criativo: Vídeo impactante (Atins)          │
+    │ Expectativa: Awareness + cliques iniciais   │
+    └─────────────────────────────────────────────┘
+
+    CAMPANHA 2: MEIO (CONSIDERAÇÃO)
+    ┌─────────────────────────────────────────────┐
+    │ Público: Quente (visitaram site)            │
+    │ Mensagem: "Veja cada detalhe da Rota"       │
+    │ Criativo: Carousel visual + descrição       │
+    │ Expectativa: Engajamento + formulário       │
+    └─────────────────────────────────────────────┘
+
+    CAMPANHA 3: FUNDO (CONVERSÃO)
+    ┌─────────────────────────────────────────────┐
+    │ Público: Muito quente (form preencheu)      │
+    │ Mensagem: "Reserve agora — Últimas vagas"   │
+    │ Criativo: CTA video + urgência              │
+    │ Expectativa: WhatsApp + conversão           │
+    └─────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                    📊 MÉTRICAS DE ACOMPANHAMENTO
+
+    DIÁRIO (10 min check)          SEMANAL (Relatório formal)
+    ├─ CPL < R$ 150? ✅            ├─ Total de leads gerados
+    ├─ CPM normal? ✅              ├─ CPL médio
+    ├─ CTR > 1.5%? ✅              ├─ Gasto vs. orçamento
+    ├─ Algo quebrado? ❌            ├─ Performance por campanha
+    └─ Ação: Pause/Scale?          ├─ Recomendação próxima semana
+                                    └─ Histórico em planilha
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                        ✅ CHECKLIST FASE A FASE
+
+    APROVAÇÃO (até 05/08)           OTIMIZAÇÃO (25/08+)
+    └─ Plano aprovado              └─ Monitorar CPL
+    └─ Tour Leader pronta          └─ Pausar baixo desempenho
+    └─ Pixel testado               └─ Scale melhores campanhas
+                                    └─ Email de follow-up
+    GRAVAÇÃO (03-13/08)            └─ Relatório semanal
+    └─ 6 vídeos brutos
+    └─ 5-6 fotos                   ANÁLISE FINAL (30/09)
+    └─ Backup de tudo              └─ Total de leads
+                                    └─ Total de reservas
+    EDIÇÃO (14-20/08)               └─ ROI calculado
+    └─ Vídeos editados             └─ Próximos passos
+    └─ Criativos Canva
+    └─ Copy de anúncios
+
+    SETUP (21-23/08)
+    └─ Pixel OK
+    └─ 3 campanhas criadas
+    └─ QA passado
+
+    GO-LIVE (24/08)
+    └─ Campanhas ativadas
+    └─ Notificar cliente
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                          🎯 SUCESSO SIGNIFICA...
+
+    Semana 1: 5-8 leads (CPL ~R$ 100)
+    Semana 2: 5-8 leads (CPL ~R$ 90)
+    Semana 3: 5-8 leads (CPL ~R$ 80) ← Melhorando
+    Semana 4: 3-6 leads (CPL ~R$ 70) ← Final push
+
+    TOTAL: 20-30 leads | CPL médio: R$ 80-100 | 3-5 reservas confirmadas
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                        ⚠️ PRINCIPAIS RISCOS
+
+    RISCO                          MITIGAÇÃO
+    ─────────────────────────────────────────────────────────
+    Tour Leader não manda vídeos   → Ligar/Confirmar diariamente
+    Pixel não funciona              → Testar 24h antes de go-live
+    CPL sobe demais                 → Pausar em dia 3; trocar público
+    Nenhum lead chega               → Revisar copy + criativo
+    Tour Leader não responde leads  → Combinar SOP de resposta WhatsApp
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Última atualização: 01/08/2026
+Versão: Campanha Lean (MVP)
+Orçamento: R$ 2.000
+Duração: 30 dias (24/08 - 24/09)

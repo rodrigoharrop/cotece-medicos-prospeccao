@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code A3</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: white; }
+        .page { width: 297mm; height: 420mm; padding: 12mm; background: white; display: flex; flex-direction: column; align-items: center; }
+        .title { font-size: 20px; font-weight: bold; color: #0F7D3F; margin-bottom: 15mm; text-align: center; }
+        .qr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; width: 100%; }
+        .qr-item { display: flex; flex-direction: column; align-items: center; padding: 5mm; border: 1px solid #ddd; }
+        .qr-item img { width: 45mm; height: 45mm; }
+        .qr-text { font-size: 8px; text-align: center; color: #666; margin-top: 3mm; }
+        @media print { body { margin: 0; } .page { margin: 0; page-break-after: always; } }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="title">Encontre este Produto nestas Farmácias</div>
+        <div class="qr-grid">
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+            <div class="qr-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='white' width='100' height='100'/%3E%3Crect fill='black' x='10' y='10' width='80' height='80'/%3E%3Crect fill='white' x='15' y='15' width='70' height='70'/%3E%3Crect fill='black' x='20' y='20' width='15' height='15'/%3E%3Crect fill='black' x='65' y='20' width='15' height='15'/%3E%3Crect fill='black' x='20' y='65' width='15' height='15'/%3E%3C/svg%3E"><div class="qr-text">Escaneie</div></div>
+        </div>
+    </div>
+</body>
+</html>

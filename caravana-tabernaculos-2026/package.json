@@ -1,0 +1,26 @@
+{
+  "name": "caravana-tabernaculos-2026",
+  "version": "1.0.0",
+  "description": "Caravana Tabernáculos 2026 — Turquia + Israel",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx remotion studio",
+    "preview": "npx remotion studio src/index.tsx",
+    "render": "npx remotion render src/index.tsx TabernaculosVideo out/caravana-tabernaculos-2026.mp4"
+  },
+  "keywords": [],
+  "author": "XDreams Travel",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.458",
+    "@remotion/player": "^4.0.458",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "remotion": "^4.0.458"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3"
+  }
+}
