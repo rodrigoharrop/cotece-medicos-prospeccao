@@ -258,20 +258,81 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .container {
+                border-radius: 0;
+            }
+
             .header {
-                padding: 40px 20px;
+                padding: 32px 20px;
             }
 
             .header h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
 
             .content {
-                padding: 30px 20px;
+                padding: 24px 16px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .stat-item {
+                padding: 14px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .download-section {
+                padding: 24px 16px;
             }
 
             .download-buttons {
                 grid-template-columns: 1fr;
+            }
+
+            .btn {
+                padding: 14px 20px;
+            }
+
+            .table-preview {
+                padding: 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+                border-radius: 0;
+            }
+
+            .preview-table-scroll {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .preview-table {
+                font-size: 11px;
+            }
+
+            .preview-table th,
+            .preview-table td {
+                padding: 8px 6px;
+                white-space: nowrap;
+            }
+
+            .copy-link {
+                font-size: 12px;
+                padding: 12px;
             }
         }
     </style>
@@ -352,7 +413,7 @@
 
             <div class="table-preview" id="tableSection" style="display: none;">
                 <h3>📋 Visualização da Planilha (Primeiros 5 registros)</h3>
-                <div style="overflow-x: auto;">
+                <div class="preview-table-scroll" style="overflow-x: auto;">
                     <table class="preview-table">
                         <thead>
                             <tr>
