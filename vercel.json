@@ -1,17 +1,4 @@
 {
-  "buildCommand": "echo 'Static deployment'",
-  "routes": [
-    {
-      "src": "/planilha",
-      "dest": "/medicos_prospeccao_completo.html"
-    },
-    {
-      "src": "/download",
-      "dest": "/download-planilha.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/download-planilha.html"
-    }
-  ]
+  "buildCommand": "exit 0",
+  "outputDirectory": "."
 }
