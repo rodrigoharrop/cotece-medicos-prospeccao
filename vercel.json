@@ -1,6 +1,5 @@
 {
   "buildCommand": "echo 'Static deployment'",
-  "public": true,
   "routes": [
     {
       "src": "/planilha",
